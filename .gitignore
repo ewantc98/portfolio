@@ -1,29 +1,26 @@
-# Secrets and environment files
+# Secrets
 .env
 .env.*
-!.env.example
-*.pem
 *.key
+*.pem
 *.pfx
 *.p12
-*.crt
-*.ovpn
-*.conf.private
-
-# Credentials and state
 credentials*
 secrets*
-*.tfstate
-*.tfstate.*
+private*
 
-# Local tooling
+# Local output
+*.log
+system-health-*.txt
+certbot-renew-*.txt
+
+# Editors and operating systems
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
 
-# Logs and temporary files
-*.log
-*.tmp
-*.bak
-*.swp
+# Python
+__pycache__/
+*.py[cod]
+.venv/

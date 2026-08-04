@@ -1,282 +1,81 @@
-# Ewan Townsend-Commins
+# Ewan Townsend-Commins — IT infrastructure portfolio
 
-## Infrastructure Engineer · Technical Operations · 2nd/3rd Line Support
+Hi, I’m Ewan. I work in IT support and infrastructure, and I spend a lot of my spare time building, breaking and rebuilding systems at home.
 
-I am a UK-based IT professional with practical experience across managed services, Microsoft environments, virtualisation, networking, Linux and Windows administration, hosting, storage, backup, VoIP and technical operations.
+I started this repo because a CV can only say “Proxmox, Linux, networking and Microsoft 365” so many times. These notes show what I have actually worked on, why I set it up that way, what went wrong and how I fixed it.
 
-This repository is an evidence-led portfolio of systems I have **supported professionally**, **built in my homelab**, or **delivered through independent technical projects**. It documents the reasoning behind the work: architecture, implementation, troubleshooting, security, recovery, change control and lessons learned.
-
-> **Security and accuracy:** All examples are sanitised. Secrets, customer information, public addresses, serial numbers and live security rules are excluded. The portfolio distinguishes professional experience from lab and project work rather than presenting every activity as production experience.
-
----
+Some of this is from professional support work and some is from my homelab. I keep that distinction clear. I do not publish customer information, production configurations, passwords, public IP addresses or anything else that should stay private.
 
 ## Start here
 
-| Area | What it demonstrates | Link |
-|---|---|---|
-| **Technical evidence matrix** | Maps skills and job requirements to specific evidence in this repository | [View evidence matrix](docs/evidence-matrix.md) |
-| **Homelab platform** | Full infrastructure design covering compute, network, storage, security and operations | [Read the homelab case study](docs/homelab/README.md) |
-| **Hardware inventory** | Enterprise server, storage, network and power equipment I have worked with | [View hardware inventory](docs/homelab/hardware-inventory.md) |
-| **Network design** | Segmentation, DNS, routing, remote access and troubleshooting methodology | [View network topology](docs/homelab/network-topology.md) |
-| **Service catalogue** | Systems I have installed, configured, evaluated, migrated or supported | [View service catalogue](docs/homelab/service-catalogue.md) |
-| **Case studies** | Problem → investigation → change → validation → lessons learned | [Browse case studies](docs/case-studies/README.md) |
-| **Operational runbooks** | Repeatable response procedures for common infrastructure incidents | [Browse runbooks](runbooks/README.md) |
-| **Scripts and examples** | Sanitised Bash, PowerShell, Docker and Nginx examples | [Browse scripts](scripts/README.md) |
-| **Development roadmap** | Honest record of what is complete, in progress and planned | [View roadmap](ROADMAP.md) |
+- [My homelab](docs/homelab/README.md)
+- [Hardware](docs/homelab/hardware.md)
+- [Network and DNS](docs/homelab/network.md)
+- [Virtualisation](docs/homelab/virtualisation.md)
+- [Storage and backups](docs/homelab/storage.md)
+- [Services I run or have tested](docs/homelab/services.md)
 
----
+## Project write-ups
 
-## Experience model
+- [Immich on Proxmox](docs/projects/immich.md)
+- [Nextcloud Snap with a proper domain](docs/projects/nextcloud.md)
+- [Web hosting, reverse proxies and certificates](docs/projects/hosting.md)
+- [3CX, FreePBX and SIP](docs/projects/voip.md)
 
-To keep the portfolio accurate, evidence is labelled using the following categories:
+## Fixes and troubleshooting notes
 
-- **Professional:** Work performed in paid IT support, managed-service or technical operations roles.
-- **Homelab:** Real systems personally designed, deployed and operated in a private environment.
-- **Project:** Independent hosting, web, infrastructure or communications work delivered outside a formal employer environment.
-- **Exploratory:** Technology installed or evaluated to develop understanding, without claiming long-term production ownership.
+- [Proxmox could not use an SMB share](docs/fixes/proxmox-smb-storage.md)
+- [Internal DNS and conditional forwarding](docs/fixes/internal-dns.md)
+- [Checking Certbot renewals properly](docs/fixes/certificates.md)
 
-This distinction matters. A strong portfolio should demonstrate capability without exaggerating context.
+## What I have worked with
 
----
+**Microsoft:** Windows 10/11, Windows Server 2019/2022/2025, Microsoft 365, Exchange-related support, Active Directory, user and device support, RDP and PowerShell.
 
-## Core technical capabilities
+**Virtualisation:** Proxmox VE, VMware ESXi 6.5/6.7/7, Hyper-V, Linux containers, Windows and Linux virtual machines.
 
-| Capability | Technologies and evidence |
-|---|---|
-| **2nd/3rd line support** | Incident ownership, service requests, escalation, remote diagnosis, hardware/software support, user communication and root-cause investigation |
-| **Microsoft platforms** | Windows client and server administration, Microsoft 365 support, Active Directory-related administration, Exchange concepts, Group Policy diagnosis and PowerShell |
-| **Virtualisation** | Proxmox VE, VMware ESXi and Hyper-V; VM/LXC placement, virtual networking, storage integration, snapshots, migration and failed-start investigation |
-| **Networking** | MikroTik, UniFi, VLANs, routing, DHCP, DNS, firewall policy, WireGuard, policy routing, switching and layered connectivity diagnosis |
-| **Linux operations** | Ubuntu and Debian, systemd, journald, permissions, storage mounts, Nginx, package management, certificates, Docker and application troubleshooting |
-| **Storage and recovery** | Synology, TrueNAS, SMB, iSCSI, RAID planning, NAS restrictions, local/off-site backup and recovery-oriented design |
-| **Hosting and web operations** | Plesk, Nginx Proxy Manager, Certbot, WordPress, PHP, DNS, mail delivery, TLS and reverse proxying |
-| **VoIP** | 3CX, FreePBX, SIP registration, extensions, trunks, dial plans, NAT and endpoint troubleshooting |
-| **Monitoring and operations** | Availability checks, service dependencies, patching, certificate lifecycle, change planning, runbooks and post-incident documentation |
+**Linux:** Ubuntu, Debian, Nginx, systemd, permissions, SMB mounts, Docker, package management, logs and certificate troubleshooting.
 
-[See the full evidence matrix](docs/evidence-matrix.md).
+**Networking:** MikroTik, UniFi, VLANs, DNS, DHCP, routing, WireGuard, firewall rules, policy routing and managed switching.
 
----
+**Storage:** Synology, TrueNAS, SMB, iSCSI, RAID planning, VM storage, application data and off-site backup.
 
-## Featured infrastructure platform
+**Hosting and services:** Plesk, Nginx Proxy Manager, Certbot, Nextcloud, Immich, AdGuard Home, Mailu, Proxmox Mail Gateway, WordPress, PHP and SQL-backed applications.
 
-My homelab is a working infrastructure environment used to practise the same disciplines required in support and infrastructure roles: controlled change, documentation, segmentation, diagnosis, security and recovery.
+**VoIP:** 3CX v20, FreePBX, Grandstream UCM, SIP registration, trunks, extensions and call routing.
 
-### Representative platform
-
-- HPE ProLiant DL20 Gen9 and DL360 Gen9 servers
-- Dell PowerEdge R430 and R320 systems
-- Supermicro X10SDV-based low-power server platform
-- Proxmox VE, VMware ESXi and Hyper-V
-- Synology RackStation and TrueNAS storage
-- MikroTik and UniFi networking
-- Linux and Windows Server workloads
-- AdGuard Home internal DNS and filtering
-- WireGuard remote access
-- Nginx and reverse-proxy services
-- Immich, Nextcloud and other self-hosted applications
-- 3CX and FreePBX lab/communications environments
-- Monitoring, certificate management and backup workflows
-
-Not every device or service is active simultaneously. The inventory records hardware and platforms I have personally worked with, while individual case studies identify the context in which each was used.
-
-### Layered architecture
+## Current lab in one diagram
 
 ```mermaid
-flowchart TB
-    WAN((Internet)) --> EDGE[Gateway / Firewall]
-    EDGE --> CORE[Managed Network Core]
+flowchart LR
+    Internet((Internet)) --> Gateway[UniFi / MikroTik gateway]
+    Gateway --> Switch[Managed switching]
 
-    CORE --> MGMT[Management Zone]
-    CORE --> COMPUTE[Compute Zone]
-    CORE --> SERVICES[Core Services Zone]
-    CORE --> USERS[Trusted User Zone]
-    CORE --> UNTRUSTED[Guest / IoT Zone]
+    Switch --> PVE[Proxmox hosts]
+    Switch --> NAS[Synology / TrueNAS]
+    Switch --> Clients[PCs and other devices]
 
-    COMPUTE --> PVE[Proxmox VE]
-    COMPUTE --> ESXI[VMware ESXi]
-    COMPUTE --> HYPERV[Hyper-V]
-    COMPUTE --> NAS[Synology / TrueNAS]
+    PVE --> DNS[AdGuard Home]
+    PVE --> Apps[Linux and Windows VMs/LXCs]
+    PVE --> Immich[Immich]
+    PVE --> Proxy[Reverse proxy]
 
-    PVE --> LXCS[LXC Containers]
-    PVE --> VMS[Linux and Windows VMs]
+    NAS --> Shares[SMB shares]
+    NAS --> Backups[Backup storage]
 
-    SERVICES --> DNS[Internal DNS]
-    SERVICES --> MON[Monitoring]
-    SERVICES --> PROXY[Reverse Proxy / TLS]
-    SERVICES --> APPS[Hosted Applications]
-
-    NAS --> DATA[Application Data]
-    NAS --> BACKUPS[Backup Repositories]
-    EDGE --> VPN[WireGuard Access]
+    VPN[WireGuard] --> Gateway
 ```
 
-The public design uses generic zones and addresses. The important evidence is the trust model, dependency mapping and troubleshooting process—not disclosure of live security information.
+The diagram is deliberately simple. The detail is in the linked pages.
 
-[Read the full architecture and operating model](docs/homelab/README.md).
+## A note on the hardware
 
----
+A lot of the kit is older enterprise equipment. That is partly because it is affordable, and partly because it gives me hands-on experience with things a small business still uses: iLO/iDRAC, ECC memory, SAS disks, RAID controllers, noisy fans and hardware that does not always cooperate.
 
-## Featured case studies
+I do not run every server 24/7. Electricity is not free, and there is no point pretending my house is a datacentre.
 
-### Proxmox storage integration for application workloads
+## What I am working on next
 
-**Context:** A Linux service required persistent NAS-hosted data while keeping the application compute layer replaceable.
+My next priority is to add more useful automation rather than more documentation for the sake of it. That means Ansible, better PowerShell, repeatable Linux builds and proper restore tests.
 
-**Work demonstrated:** SMB mounting, credentials-file handling, Linux ownership and permissions, LXC bind mounts, dependency ordering, failure diagnosis and validation after reboot.
-
-[Read the Proxmox and SMB storage case study](docs/case-studies/proxmox-smb-storage.md).
-
-### Internal DNS and conditional forwarding
-
-**Context:** Private services needed reliable names across a segmented environment without publishing internal records externally.
-
-**Work demonstrated:** Resolver design, conditional forwarding, client DNS policy, split-horizon concepts, query testing and fault isolation.
-
-[Read the internal DNS case study](docs/case-studies/internal-dns.md).
-
-### Immich deployment with separated application data
-
-**Context:** A self-hosted photo platform required predictable resource allocation and storage that could be backed up independently of the application host.
-
-**Work demonstrated:** LXC/VM design decisions, storage mapping, application dependencies, update planning, backup scope and recovery sequencing.
-
-[Read the Immich case study](docs/case-studies/immich-lxc.md).
-
-### Nextcloud Snap domain and reverse-proxy configuration
-
-**Context:** A Nextcloud Snap installation needed to accept a public domain correctly and behave predictably behind HTTPS.
-
-**Work demonstrated:** trusted domain configuration, proxy awareness, certificate options, command-line administration and validation.
-
-[Read the Nextcloud case study](docs/case-studies/nextcloud-snap-domain.md).
-
-### SIP endpoint registration troubleshooting
-
-**Context:** A VoIP endpoint had credentials but the correct registrar/endpoint settings were unclear.
-
-**Work demonstrated:** separating registrar, proxy, authentication identity and extension details; checking NAT, transport, DNS and SIP responses.
-
-[Read the SIP troubleshooting case study](docs/case-studies/sip-registration.md).
-
----
-
-## Operational approach
-
-### Incident handling
-
-1. Confirm the impact, affected users and service boundaries.
-2. Establish what changed and whether the fault is reproducible.
-3. Separate client, identity, DNS, network, operating system, storage and application layers.
-4. Gather evidence from logs, service state, routes, sockets, event records and monitoring.
-5. Test one hypothesis at a time and avoid unrelated changes.
-6. Restore service using the lowest-risk action available.
-7. Validate from the user perspective—not only from the server console.
-8. Document cause, resolution, rollback considerations and preventive action.
-
-### Change handling
-
-Before a significant change I aim to record:
-
-- Purpose and expected outcome
-- Dependencies and affected services
-- Current configuration or version
-- Backup/restore position
-- Implementation sequence
-- Validation checks
-- Rollback trigger and method
-- Documentation updates
-
-### Recovery thinking
-
-A running VM is not automatically a recoverable service. Recovery planning must include:
-
-- Application configuration
-- Databases and user data
-- Storage credentials and mounts
-- DNS and proxy records
-- Certificates
-- Dependencies and startup order
-- A tested restoration sequence
-
-[Browse the operational runbooks](runbooks/README.md).
-
----
-
-## Example scripts
-
-The repository includes sanitised examples intended to demonstrate operational thinking rather than replace organisation-specific tooling:
-
-- Linux health and evidence collection
-- Controlled Certbot renewal checks
-- PowerShell support-bundle collection
-- Docker Compose service examples
-- Nginx reverse-proxy examples
-
-All scripts should be reviewed in a test environment before use. They intentionally exclude credentials and live infrastructure details.
-
-[Browse scripts and configuration examples](scripts/README.md).
-
----
-
-## Repository structure
-
-```text
-portfolio/
-├── README.md
-├── ROADMAP.md
-├── SECURITY.md
-├── docs/
-│   ├── evidence-matrix.md
-│   ├── homelab/
-│   │   ├── README.md
-│   │   ├── architecture.md
-│   │   ├── hardware-inventory.md
-│   │   ├── network-topology.md
-│   │   ├── networking.md
-│   │   ├── service-catalogue.md
-│   │   ├── services.md
-│   │   ├── storage-backup.md
-│   │   └── security.md
-│   ├── case-studies/
-│   │   ├── README.md
-│   │   ├── proxmox-smb-storage.md
-│   │   ├── internal-dns.md
-│   │   ├── immich-lxc.md
-│   │   ├── nextcloud-snap-domain.md
-│   │   └── sip-registration.md
-│   └── projects.md
-├── runbooks/
-│   ├── README.md
-│   ├── linux-service-outage.md
-│   ├── storage-unavailable.md
-│   ├── certificate-renewal.md
-│   └── vm-will-not-start.md
-├── scripts/
-│   ├── README.md
-│   ├── bash/
-│   └── powershell/
-├── examples/
-│   ├── docker/
-│   └── nginx/
-└── templates/
-    └── project-case-study.md
-```
-
----
-
-## Current development priorities
-
-- Add screenshots with sensitive information removed
-- Add tested restore records and recovery timings
-- Expand Microsoft 365, Windows Server and PowerShell evidence
-- Build repeatable Ansible deployment examples
-- Add monitoring and alert-response case studies
-- Continue converting historical troubleshooting work into structured case studies
-
-[View the detailed roadmap](ROADMAP.md).
-
----
-
-## Contact
-
-This repository is intended to accompany my CV and job applications. Contact details are provided directly to recruiters and employers rather than published in the repository.
+The scripts in this repo are small on purpose. I would rather publish something I understand and have checked than paste in a huge script just to make the repository look busy.

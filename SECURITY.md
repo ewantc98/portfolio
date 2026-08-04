@@ -1,22 +1,18 @@
-# Security Policy
+# Security
 
-This repository is a public, sanitised technical portfolio.
+This repository contains notes and example configuration only.
 
-## Sensitive information
+I do not publish:
 
-Do not commit or post:
+- passwords or API keys
+- private keys
+- customer information
+- public IP addresses tied to live systems
+- complete firewall exports
+- live VPN configurations
 
-- Passwords, API keys or access tokens
-- Private keys or VPN peer configurations
-- Customer, employer or third-party confidential information
-- Live public IP addresses or unnecessary internal addressing
-- Complete production firewall configurations
-- Unredacted screenshots containing sensitive data
+Private IP addresses and internal example names may appear because they are useful when explaining a setup. They are not enough to access anything.
 
-## Reporting a concern
+If I accidentally commit a real secret, assume it is compromised and rotate it. Deleting it from the latest commit is not enough because Git keeps history.
 
-Please do not open a public issue containing credentials, exploit details or personal information. Contact the repository owner privately through an appropriate verified channel.
-
-## Example data
-
-Addresses, domains, credentials and hostnames shown in this repository are examples unless explicitly stated otherwise. Example ranges and `example.com` names are used to avoid exposing live infrastructure.
+The scripts here are small utilities for my own lab. Read them before running them on your system.
